@@ -89,7 +89,7 @@ To deploy this project properly, please obtain the EFI folder from this reposito
 - DVD Drive
 
 ## Partially working:
-- Sleep
+- Sleep (Sleep is broken in Windows sometimes, MacOS is no exception)
 - USB ports (the USB 2.0 port next to the 3.5mm Audio Jack in my laptop is broken)
 > [!NOTE]
 > It is necessary to re-map USB using [USBToolBox](https://github.com/USBToolBox/tool), since the USB 2.0 port next to the 3.5mm Audio Jack in my laptop is broken
