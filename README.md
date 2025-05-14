@@ -87,12 +87,12 @@ To deploy this project properly, please obtain the EFI folder from this reposito
 - Brightness
 - Battery Status
 - DVD Drive
-
+- USB 3.0 ports
 ## Partially working:
 - Sleep (Sleep is broken in Windows sometimes, MacOS is no exception)
-- USB ports (the USB 2.0 port next to the 3.5mm Audio Jack in my laptop is broken)
+- USB ports 2.0 ports
 > [!NOTE]
-> It is necessary to re-map USB using [USBToolBox](https://github.com/USBToolBox/tool), since the USB 2.0 port next to the 3.5mm Audio Jack in my laptop is broken
+> These USB 2.0 ports (EHCI Generic USB Hub) won't work after restarting. They only work after completely shutting down the laptop and booting straight to MacOS.
 
 ## Known issue(s):
 - Some apps like Chess.app, Safari.app, etc got graphic artifacts/flickering when entering fullscreen mode (this flickering issue only affect 1366x768 display, 1600x900 one does not have this issue)
