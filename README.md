@@ -1,5 +1,5 @@
 # Dell-Latitude-E5430-Hackintosh
-This repository and project hosts the files necessary to boot macOS successfully on the Dell Latitude E5430 Laptop 
+This repository and project hosts the files necessary to boot macOS (Catalina, BigSur, Monterey & Ventura) successfully on the Dell Latitude E5430 Laptop 
 ![Dell Latitude E5430](https://github.com/BluePurplePro/Dell-Latitude-E5430-with-i5-3320M-Hackintosh-MacOS-Catalina/assets/84092284/dc9655ca-ae35-4149-9db8-462ecfeacc6c)
 
 # DISCLAIMER
