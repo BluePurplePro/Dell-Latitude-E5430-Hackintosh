@@ -20,11 +20,11 @@ To deploy this project properly, please obtain the EFI folder from this reposito
   - CPU: Intel Core i5-3320M
   - GPU: Intel(R) HD Graphics 4000
   - Display Resolution: 1366x768
-  - Mobo: Dell 04V77Y Rev. A00
+  - Mobo: Dell 04V77Y Rev. A00 (QM77 Chipset)
   - SATA Drive: Kingston SA400S37 120GB
   - DVD Drive: MATSHITA DVD+-RW UJ8D1
   - Keyboard & TouchPad: PS2 Keyboard & PS2 Alps Touchpad
-  - Wifi & Bluetooth: Intel Centrino Wireless-N 1030
+  - mPCIe Wifi: ~~Intel Centrino Advanced-N 6205~~ Intel Centrino Wireless-N 1030 (with Bluetooth 3.0)
   - Ethernet: Intel 82579LM Gigabit Network Connection
   - Audio: IDT 92HD93BXX + Intel HDMI Output
   - BIOS version: A21
@@ -46,10 +46,8 @@ To deploy this project properly, please obtain the EFI folder from this reposito
   - Fastboot ~> Thorough
 - **Virtualization Support**
   - Virtualization ~> Enabled
-  - VT for Direct I/O ~> Disabled
+  - VT for Direct I/O ~> Enabled
   - Trusted Execution ~> Disabled
-> [!NOTE]
-> ``VT for Direct I/O`` could be enabled if ``DisableIoMapper`` (under Kernel ~> Quirk) is Enabled
 
 # Drivers & Essential Kernel Extensions
 | Required Drivers | 
@@ -68,9 +66,9 @@ To deploy this project properly, please obtain the EFI folder from this reposito
 | Intel(R) HD Graphics 4000 | [Whatevergreen.kext](https://github.com/acidanthera/WhateverGreen)  |
 | Keyboard & Touchpad | [VoodooPS2Controller.kext](https://github.com/acidanthera/VoodooPS2)  |
 | Intel 82579LM Gigabit Network Connection  | [IntelMausi.kext](https://github.com/acidanthera/IntelMausi) |
-| Intel Wifi | [AirportItlwm.kext](https://github.com/OpenIntelWireless/itlwm) |
-| Intel Bluetooth (from MacOS10.13 to MacOS11) | [IntelBluetoothFirmware.kext; IntelBTPatcher.kext; IntelBluetoothInjector.kext](https://github.com/OpenIntelWireless/IntelBluetoothFirmware) |
-| Intel Bluetooth (MacOS 12 and newer) | [IntelBluetoothFirmware.kext; IntelBTPatcher.kext](https://github.com/OpenIntelWireless/IntelBluetoothFirmware) & [BlueToolFixup.kext](https://github.com/acidanthera/BrcmPatchRAM)|
+| Intel N-6205/N-1030 Wifi | [AirportItlwm.kext](https://github.com/OpenIntelWireless/itlwm) |
+| Intel N-1030 Bluetooth (from MacOS10.13 to MacOS11) | [IntelBluetoothFirmware.kext; IntelBTPatcher.kext; IntelBluetoothInjector.kext](https://github.com/OpenIntelWireless/IntelBluetoothFirmware) |
+| Intel N-1030 Bluetooth (MacOS 12 and newer) | [IntelBluetoothFirmware.kext; IntelBTPatcher.kext](https://github.com/OpenIntelWireless/IntelBluetoothFirmware) & [BlueToolFixup.kext](https://github.com/acidanthera/BrcmPatchRAM)|
 | IDT 92HD93BXX  | [AppleALC.kext](https://github.com/acidanthera/AppleALC) with layoutid ``12`` |
 
 > [!IMPORTANT]
@@ -92,7 +90,7 @@ To deploy this project properly, please obtain the EFI folder from this reposito
 - Sleep (Sleep is broken in Windows sometimes, MacOS is no exception)
 - USB ports 2.0 ports
 > [!NOTE]
-> These USB 2.0 ports (EHCI Generic USB Hub) won't work after restarting. They only work after completely shutting down the laptop and booting straight to MacOS.
+> These USB 2.0 ports (EHCI Generic USB Hub) in the right side and the back won't work after restarting. They only work after completely shutting down the laptop and booting straight to MacOS.
 
 ## Known issue(s):
 - Some apps like Chess.app, Safari.app, etc got graphic artifacts/flickering when entering fullscreen mode (this flickering issue only affect 1366x768 display, 1600x900 one does not have this issue)
@@ -104,7 +102,7 @@ To deploy this project properly, please obtain the EFI folder from this reposito
 ## Not working:
 - Airplane Mode Switch
 - Airdrop (Intel Wireless)
-- VGA Output (Analog)
+- VGA Analog Output (IvyBridge)
 - AppleIntelPowerManagement (CFG Lock)
 > [!NOTE]
 > Follow [this guide](https://github.com/BluePurplePro/Disable-CFG-Lock-Dell-Machines) to turn off CFG-Lock on Dell Latitude E5430
