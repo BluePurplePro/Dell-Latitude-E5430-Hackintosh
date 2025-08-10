@@ -24,11 +24,11 @@ To deploy this project properly, please obtain the EFI folder from this reposito
   - SATA Drive: Kingston SA400S37 120GB
   - DVD Drive: MATSHITA DVD+-RW UJ8D1
   - Keyboard & TouchPad: PS2 Keyboard & PS2 Alps Touchpad
-  - mPCIe Wifi: ~~Intel Centrino Advanced-N 6205~~ Intel Centrino Wireless-N 1030 (with Bluetooth 3.0)
+  - Wifi: ~~Intel N 6205 (no Bluetooth)~~ Intel N 1030 (Bluetooth 3.0)
   - Ethernet: Intel 82579LM Gigabit Network Connection
   - Audio: IDT 92HD93BXX + Intel HDMI Output
   - BIOS version: A21
-- Click [here](https://www.dell.com/support/manuals/en-us/latitude-e5430/delllatitudee5430_om-v1/specifications?guid=guid-dc451241-36f9-4f68-bf76-de4751505456&lang=en-us) for more information about the laptop's specifications
+- More information about the specs could be found [here](https://www.dell.com/support/manuals/en-us/latitude-e5430/delllatitudee5430_om-v1/specifications?guid=guid-dc451241-36f9-4f68-bf76-de4751505456&lang=en-us)
 
 # BIOS Settings (from A07 to A21 BIOS)
 - **General**
@@ -67,8 +67,8 @@ To deploy this project properly, please obtain the EFI folder from this reposito
 | Keyboard & Touchpad | [VoodooPS2Controller.kext](https://github.com/acidanthera/VoodooPS2)  |
 | Intel 82579LM Gigabit Network Connection  | [IntelMausi.kext](https://github.com/acidanthera/IntelMausi) |
 | Intel N-6205/N-1030 Wifi | [AirportItlwm.kext](https://github.com/OpenIntelWireless/itlwm) |
-| Intel N-1030 Bluetooth (from MacOS10.13 to MacOS11) | [IntelBluetoothFirmware.kext; IntelBTPatcher.kext; IntelBluetoothInjector.kext](https://github.com/OpenIntelWireless/IntelBluetoothFirmware) |
-| Intel N-1030 Bluetooth (MacOS 12 and newer) | [IntelBluetoothFirmware.kext; IntelBTPatcher.kext](https://github.com/OpenIntelWireless/IntelBluetoothFirmware) & [BlueToolFixup.kext](https://github.com/acidanthera/BrcmPatchRAM)|
+| Intel Bluetooth (MacOS10.13 ~ MacOS11) | [IntelBluetoothFirmware.kext; IntelBTPatcher.kext; IntelBluetoothInjector.kext](https://github.com/OpenIntelWireless/IntelBluetoothFirmware) |
+| Intel Bluetooth (MacOS 12 and newer) | [IntelBluetoothFirmware.kext; IntelBTPatcher.kext](https://github.com/OpenIntelWireless/IntelBluetoothFirmware) & [BlueToolFixup.kext](https://github.com/acidanthera/BrcmPatchRAM)|
 | IDT 92HD93BXX  | [AppleALC.kext](https://github.com/acidanthera/AppleALC) with layoutid ``12`` |
 
 > [!IMPORTANT]
@@ -77,23 +77,20 @@ To deploy this project properly, please obtain the EFI folder from this reposito
 # Result
 ## Working:
 - iGPU
-- Wifi & Bluetooth
+- Intel Wifi (and Bluetooth)
 - Internal Sound
 - Keyboard
 - Touchpad
 - HDMI output
-- Brightness
+- Brightness Key (**Fn+F3** & **Fn+Pause**)
 - Battery Status
 - DVD Drive
-- USB 3.0 ports
+- USB ports
 ## Partially working:
-- Sleep (Sleep is broken in Windows sometimes, MacOS is no exception)
-- USB ports 2.0 ports
-> [!NOTE]
-> These USB 2.0 ports (EHCI Generic USB Hub) in the right side and the back won't work after restarting. They only work after completely shutting down the laptop and booting straight to MacOS.
+- Sleep (for some reason sleep is broken in Windows on my Laptop, so MacOS is no exception)
 
 ## Known issue(s):
-- Some apps like Chess.app, Safari.app, etc got graphic artifacts/flickering when entering fullscreen mode (this flickering issue only affect 1366x768 display, 1600x900 one does not have this issue)
+- Some apps like Chess.app, Safari.app, etc got graphic artifacts/flickering when entering fullscreen mode (the flickering issue only affect 1366x768 display, 1600x900 one does not have this issue)
 <video src="https://github.com/user-attachments/assets/eac22928-008e-4244-be02-058210d6261d" width="1920" height="1080"></video>
 
 > [!NOTE]
