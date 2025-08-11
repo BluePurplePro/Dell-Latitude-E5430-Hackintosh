@@ -78,9 +78,9 @@ To deploy this project properly, please obtain the EFI folder from this reposito
 ## Working:
 - iGPU
 - Intel Wifi (and Bluetooth)
+- Ethernet
 - Internal Sound
-- Keyboard
-- Touchpad
+- Keyboard & Touchpad
 - HDMI output
 - Brightness Key (**Fn+F3** & **Fn+Pause**)
 - Battery Status
