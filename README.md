@@ -82,7 +82,7 @@ To deploy this project properly, please obtain the EFI folder from this reposito
 - Internal Sound
 - Keyboard & Touchpad
 - HDMI output
-- Brightness Key (**Fn+F3** & **Fn+Pause**)
+- Brightness Key (**Fn+F3** & **Fn+Insert**)
 - Battery Status
 - DVD Drive
 - USB ports
